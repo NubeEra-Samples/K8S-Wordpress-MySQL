@@ -1,0 +1,42 @@
+Cluster Preparation:
+--------------------------
+Master$     kubeadm init
+Worker$    kubeadm join
+
+Clone Repository
+-----------------------
+git clone https://github.com/NubeEra-Samples/K8S-Wordpress-MySQL.git
+cd K8S-Wordpress-MySQL
+
+Apply & Verify
+------------------
+kubectl version
+
+kubectl get pods
+kubectl get svc
+kubectl get nodes
+kubectl get deployments
+kubectl get secrets
+kubectl get pvc
+
+kubectl apply -k ./
+
+kubectl get service wordpress --url
+
+http://1.2.3.4:32406
+
+
+
+Clean Up
+------------
+kubectl delete -k ./
+
+
+
+
+
+
+
+
+
+
